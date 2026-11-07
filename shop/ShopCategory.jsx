@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 const title = "All Categories";
-import Data from "/src/products.json";
+import Data from "../products.json";
 
-const ShopCategory = ({ filterItem, setItem, menuItems, setProducts, selectedCategory }) => {
+const ShopCategory = ({ filterItem, menuItems, setProducts, selectedCategory }) => {
   return (
     <>
       <div className="widget-header">

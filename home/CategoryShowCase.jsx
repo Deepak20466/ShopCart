@@ -120,7 +120,7 @@ const CategoryShowCase = () => {
         <div className="section-wrapper">
             <div className="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 course-filter">
                 { items.map((elem) => {
-                    const { id, imgUrl, imgAlt, cate, title, brand, authorName, price } = elem;
+                    const { id, imgUrl, cate, title, brand, price } = elem;
                     return (
                         <div className="col" key={id}>
                             <div className="course-item style-4">

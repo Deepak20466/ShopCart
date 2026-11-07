@@ -13,21 +13,6 @@ const title = (
 );
 const desc = "We Have The Largest Collection of products";
 
-const bannerList = [
-  {
-    iconName: "icofont-users-alt-4",
-    text: "1.5 Million Customers",
-  },
-  {
-    iconName: "icofont-notification",
-    text: "More then 2000 Marchent",
-  },
-  {
-    iconName: "icofont-globe",
-    text: "Buy Anything Online",
-  },
-];
-
 const Banner = () => {
   // product search funtionality
   const [searchInput, setSearchInput] = useState("");

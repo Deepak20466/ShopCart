@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-
 import { Link } from "react-router-dom";
 
 const title = "About ShopCart";

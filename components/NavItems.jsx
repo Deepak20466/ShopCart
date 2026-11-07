@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/logo/logo.png'
 const NavItems = () => {
      let [menuToggle,setMenuToggle] =useState(false)
      let [socialToggle,setSocialToggle]= useState(false)
@@ -43,7 +42,7 @@ const NavItems = () => {
               <div className='logo-search-active'>
                 <div className='logo'>
                   <Link to={'/'}>
-                    <img src={logo} alt="" />
+                    <span>ShopCart</span>
                    
 
                   </Link>

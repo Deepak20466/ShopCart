@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PageHeader from "../components/PageHeader";
-import { Component, Fragment, useState } from "react";
+import { useState } from "react";
 import Search from "./Search";
 import Pagination from "./Pagination";
 import ShopCategory from "./ShopCategory";
@@ -8,7 +8,7 @@ import PopularPost from "./PopularPost";
 import Tags from "./Tags";
 import ProductCards from "./ProductCards";
 const showResult = "Showing 01 - 12 of 139 Results";
-import Data from "/src/products.json"
+import Data from "../products.json";
 
 const Shop = () => {
   const [GridList, setGridList] = useState(true);
@@ -87,7 +87,7 @@ const [selectedCategory, setSelectedCategory] = useState("All");
             </div>
             <div className="col-lg-4 col-12">
               <aside>
-                <Search products={products} GridList={GridList} />
+                <Search products={products} />
                 {/* <ShopCategory /> */}
                 <ShopCategory
                   filterItem={filterItem}

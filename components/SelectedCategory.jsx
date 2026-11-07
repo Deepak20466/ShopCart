@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SelectedCategory = (select) => {
+const SelectedCategory = () => {
   return (
     <select>
         <option value="all">All Categories</option>

@@ -6,34 +6,6 @@ const title = "Register Now";
 const socialTitle = "Register With Social Media";
 const btnText = "Get Started Now";
 
-let socialList = [
-  {
-    link: "#",
-    iconName: "icofont-facebook",
-    className: "facebook",
-  },
-  {
-    link: "#",
-    iconName: "icofont-twitter",
-    className: "twitter",
-  },
-  {
-    link: "#",
-    iconName: "icofont-linkedin",
-    className: "linkedin",
-  },
-  {
-    link: "#",
-    iconName: "icofont-instagram",
-    className: "instagram",
-  },
-  {
-    link: "#",
-    iconName: "icofont-pinterest",
-    className: "pinterest",
-  },
-];
-
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -47,8 +19,7 @@ const Signup = () => {
   // login with google
   const handleRegister = () => {
     signUpWithGmail()
-      .then((result) => {
-        const user = result.user;
+  .then(() => {
         navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
@@ -69,14 +40,12 @@ const Signup = () => {
       // Passwords match, proceed with signup logic
       setErrorMessage(""); // Clear the error message
       createUser(email, password)
-        .then((userCredential) => {
+        .then(() => {
           // Signed in successfully
-          const user = userCredential.user;
           alert("Account Created Successfully!")
           navigate(from, { replace: true });
         })
         .catch((error) => {
-          const errorCode = error.code;
           const errorMessage = error.message;
           console.log(errorMessage);
           alert(`${errorMessage}`)

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
-import delImgUrl from '/images/shop/del.png'
 import CheckoutPage from "./CheckoutPage";
 
 const CartPage = () => {
@@ -119,7 +118,7 @@ const CartPage = () => {
                       </td>
                       <td className="cat-edit">
                         <a href="#" onClick={() => handleRemoveItem(item)}>
-                          <img src={delImgUrl} alt="" />
+                          Remove
                         </a>
                       </td>
                     </tr>
