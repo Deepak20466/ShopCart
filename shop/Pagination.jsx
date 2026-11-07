@@ -14,8 +14,8 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, activePage }) =>
     <li>
         <a href="#"
          onClick={() => {
-          if (activePage < pageNumbers.length) {
-            paginate(activePage - 1); // Navigate to the next page
+          if (activePage > 1) {
+            paginate(activePage - 1); // Navigate to the previous page
           }
         }}
         
