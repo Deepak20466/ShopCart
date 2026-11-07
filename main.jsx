@@ -15,10 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 
-// fonts and icons
-import '././assets/css/icofont.min.css';
-import '././assets/css/animate.css';
-import '././assets/css/style.min.css';
+// The original template's local CSS files are not present in this repository.
 import Blog from './blog/Blog.jsx';
 import Shop from './shop/Shop.jsx';
 import SingleProduct from './shop/SingleProduct.jsx';

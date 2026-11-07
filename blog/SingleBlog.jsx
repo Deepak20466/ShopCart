@@ -1,40 +1,20 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PageHeader from "../components/PageHeader";
 import { useParams } from "react-router-dom";
 import blogList from "../utilis/blogdata";
 import MostPopularPost from "../components/Sidebar/MostPopularPost";
 import Tags from "../shop/Tags";
 const socialList = [
-  {
-    link: "#",
-    iconName: "icofont-facebook",
-    className: "facebook",
-  },
-  {
-    link: "#",
-    iconName: "icofont-twitter",
-    className: "twitter",
-  },
-  {
-    link: "#",
-    iconName: "icofont-linkedin",
-    className: "linkedin",
-  },
-  {
-    link: "#",
-    iconName: "icofont-instagram",
-    className: "instagram",
-  },
-  {
-    link: "#",
-    iconName: "icofont-pinterest",
-    className: "pinterest",
-  },
+  { link: "#", iconName: "icofont-facebook", className: "facebook" },
+  { link: "#", iconName: "icofont-twitter", className: "twitter" },
+  { link: "#", iconName: "icofont-linkedin", className: "linkedin" },
+  { link: "#", iconName: "icofont-instagram", className: "instagram" },
+  { link: "#", iconName: "icofont-pinterest", className: "pinterest" },
 ];
 
 const SingleBlog = () => {
-  const [blog, setBlog] = useState(blogList);
+  const blog = blogList;
   const { id } = useParams();
   console.log(Number(id));
   const result = blog.filter((p) => p.id === Number(id));

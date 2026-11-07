@@ -6,34 +6,6 @@ const title = "Login";
 const socialTitle = "Login With Social Media";
 const btnText = "Submit Now";
 
-const socialList = [
-  {
-    link: "#",
-    iconName: "icofont-github",
-    className: "github",
-  },
-  {
-    link: "#",
-    iconName: "icofont-facebook",
-    className: "facebook",
-  },
-  {
-    link: "#",
-    iconName: "icofont-twitter",
-    className: "twitter",
-  },
-  {
-    link: "#",
-    iconName: "icofont-linkedin",
-    className: "linkedin",
-  },
-  {
-    link: "#",
-    iconName: "icofont-instagram",
-    className: "instagram",
-  },
-];
-
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const { signUpWithGmail, login } = useContext(AuthContext);
@@ -47,8 +19,7 @@ const Login = () => {
   // login with google
   const handleRegister = () => {
     signUpWithGmail()
-      .then((result) => {
-        const user = result.user;
+      .then(() => {
         navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
@@ -70,8 +41,7 @@ const Login = () => {
         navigate(from, { replace: true });
         // ...
       })
-      .catch((error) => {
-        const errorMessage = error.message;
+      .catch(() => {
         setErrorMessage("Please provide valid email & password!");
       });
   };

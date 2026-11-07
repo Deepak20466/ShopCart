@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Search = ({ products, GridList }) => {
+const Search = ({ products }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) =>
